@@ -1,0 +1,22 @@
+{
+  "name": "niuma-premium-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP wrapper for NIUMA yearly X Premium and Premium+ services",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/webshop-client.js",
+    "smoke": "node test/smoke-client.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "express": "5.2.1",
+    "tough-cookie": "6.0.1",
+    "zod": "4.4.3"
+  }
+}
