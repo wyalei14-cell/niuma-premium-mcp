@@ -11,7 +11,7 @@
     "start": "node src/server.js",
     "test": "node --test",
     "check": "node --check src/server.js && node --check src/webshop-client.js",
-    "smoke": "node test/smoke-client.js"
+    "smoke": "node scripts/smoke-client.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.29.0",
