@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: niuma-premium-mcp
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: WEBSHOP_ORIGIN
+        value: https://lanv.niuma.works
+      - key: WEBSHOP_ENTRY_PATH
+        value: /p/niuma
